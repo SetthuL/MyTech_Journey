@@ -266,8 +266,25 @@
         <p>&copy; 2025 My Tech Journey  || Lange B Siphosethu</p>
     </footer>
 
+    <button id="scrollToTopBtn" title="Go to Top">
+      <i class="fa-arrow-up"></i>
+    </button>
 
+    <script>
+      let scrolTopBtn = document.getElementById("scrollToTopBtn");
 
+        window.onscroll = function() {
+            if (
+                document.body.scrollTop > 100 ||documentnt.documentElement.scrollTop > 100) {
+                scrolTopBtn.style.display = "block";
+            } else {
+                scrolTopBtn.style.display = "none";
+            }
+        };
+        scrolTopBtn.onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
 
     
 </body>
