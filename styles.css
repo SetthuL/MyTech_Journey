@@ -304,6 +304,8 @@ section {
     cursor: pointer;
     display: none;
     font-size: 18px;
+    display: none
+    z-index: 100;
     }
 
 /* Responsive Styles */
