@@ -1,3 +1,22 @@
+// Toggle fuction to show/hide sections//
+      function toggleSection(sectionId) {
+        const section = document.getElementById(sectionId);
+
+        document.querySelectorAll("section").forEach(sec => {
+          sec.classList.remove("visible");
+          sec.classList.add("hidden");
+        });
+
+      section.classList.remove("hidden");
+      section.classList.add("visible");
+
+      document.querySelectorAll("nav ul li a").forEach(link => {
+        link.classList.remove("active");
+      });
+      document.querySelector(`a[onclick="toggleSection('${sectionId}')"]`).classList.add("active");
+    }
+
+// Scroll to Top Button Functionality //
 let scrolTopBtn = document.getElementById("scrollToTopBtn");
 
 window.onscroll = function() {
