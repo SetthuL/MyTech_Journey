@@ -296,17 +296,20 @@ section {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #ffffff;
-    color: #1e3c72;
+    background-color: #333;
+    color: #fff;
     border: none;
     padding: 10px 15px;
     border-radius: 50%;
     cursor: pointer;
     display: none;
     font-size: 18px;
-    display: none
     z-index: 100;
-    }
+ }
+
+    #scrollToTopBtn:hover {
+        background-color: #521e7e;
+}
 
 /* Responsive Styles */
 @media screen and (max-width: 480px) {
@@ -330,7 +333,7 @@ html {
 }
 
 /************Projects Styles************/
-.projects-container {
+.project-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -349,8 +352,8 @@ html {
     box-shadow: 0 0 15px rgba(255, 30, 102, 0.5);
     border: 2px solid rgba(255, 30, 102, 0.2);
     transition: all 0.4s ease-in-out;
-    transform: translateY(20px);
-    opacity: 0;
+    transform: translateY(0);
+    opacity: 1;
     margin: 15px;
 }
 
@@ -374,17 +377,9 @@ html {
     color: #ff5ea2;
 }
 
-/* Animation for project cards */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+/* Animation for project cards drop in */
+
+
 
 @keyframes pulseGlow {
   0% {
@@ -396,8 +391,9 @@ html {
 }
 
 .project-card.visible {
-  animation: fadeInUp 0.8s ease forwards, pulseGlow 2s infinite alternate;
+  animation: dropIn 1s ease forwards, pulseGlow 2s infinite alternate;
 }
+
 
 .project-card:hover {
     transform: scale(1.05);
